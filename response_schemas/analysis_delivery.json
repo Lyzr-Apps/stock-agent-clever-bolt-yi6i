@@ -1,0 +1,46 @@
+{
+  "agent_name": "Analysis & Delivery Agent",
+  "agent_id": "69975ac60e98ba5c96c4669a",
+  "agent_type": "sub-agent",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "has_tools": true,
+  "tools": ["GMAIL_SEND_EMAIL"],
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "report_date": { "type": "string" },
+          "portfolio_summary": { "type": "string" },
+          "key_highlights": { "type": "array", "items": { "type": "string" } },
+          "stock_analyses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ticker": { "type": "string" },
+                "company_name": { "type": "string" },
+                "valuation_assessment": { "type": "string" },
+                "growth_analysis": { "type": "string" },
+                "financial_health": { "type": "string" },
+                "recent_developments": { "type": "string" },
+                "analyst_sentiment": { "type": "string" },
+                "overall_rating": { "type": "string" }
+              },
+              "required": ["ticker", "company_name", "valuation_assessment", "growth_analysis", "financial_health", "recent_developments", "analyst_sentiment", "overall_rating"],
+              "additionalProperties": false
+            }
+          },
+          "email_sent": { "type": "string" },
+          "email_recipient": { "type": "string" }
+        },
+        "required": ["report_date", "portfolio_summary", "key_highlights", "stock_analyses", "email_sent", "email_recipient"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

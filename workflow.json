@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "Scheduler / Manual Trigger",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "manager_agent",
+      "type": "Agent",
+      "label": "Stock Analysis Coordinator",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "research_agent",
+      "type": "Agent",
+      "label": "Stock Research Agent",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "delivery_agent",
+      "type": "Agent",
+      "label": "Analysis & Delivery Agent",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Email Report Delivered",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "manager_agent"
+    },
+    {
+      "source": "manager_agent",
+      "target": "research_agent"
+    },
+    {
+      "source": "manager_agent",
+      "target": "delivery_agent"
+    },
+    {
+      "source": "delivery_agent",
+      "target": "output_node"
+    }
+  ]
+}

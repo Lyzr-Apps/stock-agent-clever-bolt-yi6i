@@ -1,0 +1,40 @@
+{
+  "agent_name": "Stock Analysis Coordinator",
+  "agent_id": "69975ad74244c70789da262a",
+  "description": "Orchestrates the daily analysis workflow \u2014 receives the stock watchlist, delegates research to the research agent, then passes results to the analysis & delivery agent, and ensures a complete report is compiled and emailed",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "status": "string",
+    "stocks_analyzed": [
+      "string"
+    ],
+    "report_date": "string",
+    "email_sent": "string",
+    "email_recipient": "string",
+    "portfolio_summary": "string",
+    "key_highlights": [
+      "string"
+    ],
+    "errors": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "status": "sample string",
+    "stocks_analyzed": [
+      "sample string"
+    ],
+    "report_date": "sample string",
+    "email_sent": "sample string",
+    "email_recipient": "sample string",
+    "portfolio_summary": "sample string",
+    "key_highlights": [
+      "sample string"
+    ],
+    "errors": [
+      "sample string"
+    ]
+  }
+}

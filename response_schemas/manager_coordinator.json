@@ -1,0 +1,29 @@
+{
+  "agent_name": "Stock Analysis Coordinator",
+  "agent_id": "69975ad74244c70789da262a",
+  "agent_type": "manager",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string" },
+          "stocks_analyzed": { "type": "array", "items": { "type": "string" } },
+          "report_date": { "type": "string" },
+          "email_sent": { "type": "string" },
+          "email_recipient": { "type": "string" },
+          "portfolio_summary": { "type": "string" },
+          "key_highlights": { "type": "array", "items": { "type": "string" } },
+          "errors": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["status", "stocks_analyzed", "report_date", "email_sent", "email_recipient", "portfolio_summary", "key_highlights", "errors"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "agents": {
+    "manager": {
+      "name": "Stock Analysis Coordinator",
+      "agent_id": "69975ad74244c70789da262a",
+      "type": "manager"
+    },
+    "research": {
+      "name": "Stock Research Agent",
+      "agent_id": "69975ab100057fe9f1918d4b",
+      "type": "sub-agent"
+    },
+    "delivery": {
+      "name": "Analysis & Delivery Agent",
+      "agent_id": "69975ac60e98ba5c96c4669a",
+      "type": "sub-agent"
+    }
+  },
+  "schedule": {
+    "schedule_id": "69975adc399dfadeac37bac4",
+    "agent_id": "69975ad74244c70789da262a",
+    "cron_expression": "0 7 * * *",
+    "timezone": "America/New_York"
+  }
+}

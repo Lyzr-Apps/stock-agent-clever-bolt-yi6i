@@ -1,0 +1,46 @@
+{
+  "agent_name": "Stock Research Agent",
+  "agent_id": "69975ab100057fe9f1918d4b",
+  "agent_type": "sub-agent",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "AgentResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "stocks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ticker": { "type": "string" },
+                "company_name": { "type": "string" },
+                "pe_ratio": { "type": "string" },
+                "eps": { "type": "string" },
+                "revenue_growth": { "type": "string" },
+                "debt_to_equity": { "type": "string" },
+                "dividend_yield": { "type": "string" },
+                "market_cap": { "type": "string" },
+                "recent_earnings": { "type": "string" },
+                "analyst_consensus": { "type": "string" },
+                "price_target": { "type": "string" },
+                "notable_news": { "type": "string" },
+                "current_price": { "type": "string" }
+              },
+              "required": ["ticker", "company_name", "pe_ratio", "eps", "revenue_growth", "debt_to_equity", "dividend_yield", "market_cap", "recent_earnings", "analyst_consensus", "price_target", "notable_news", "current_price"],
+              "additionalProperties": false
+            }
+          },
+          "analysis_date": { "type": "string" },
+          "summary": { "type": "string" }
+        },
+        "required": ["stocks", "analysis_date", "summary"],
+        "additionalProperties": false
+      }
+    }
+  }
+}
