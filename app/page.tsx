@@ -834,7 +834,7 @@ export default function Page() {
                 <div className="flex items-center gap-3">
                   <FiTrendingUp className="w-5 h-5" style={{ color: 'hsl(var(--primary))' }} />
                   <span className="font-serif text-lg tracking-widest font-medium uppercase" style={{ color: 'hsl(var(--foreground))' }}>
-                    GameStock
+                    MonStock
                   </span>
                 </div>
 
@@ -1751,7 +1751,7 @@ export default function Page() {
           >
             <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
               <span className="text-xs tracking-wider" style={{ color: 'hsl(var(--muted-foreground))' }}>
-                GameStock -- Daily Stock Analysis
+                MonStock -- Daily Stock Analysis
               </span>
               <span className="text-xs tracking-wider" style={{ color: 'hsl(var(--muted-foreground))' }}>
                 Powered by Lyzr AI Agent Network
