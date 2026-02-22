@@ -53,7 +53,7 @@ const AGENTS = [
 ]
 
 const THEME_VARS = {
-  '--background': '0 0% 99%',
+  '--background': '330 80% 92%',
   '--foreground': '30 5% 15%',
   '--card': '0 0% 100%',
   '--card-foreground': '30 5% 15%',
